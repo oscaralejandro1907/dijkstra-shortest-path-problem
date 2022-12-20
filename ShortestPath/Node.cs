@@ -8,15 +8,25 @@ namespace ShortestPath
 {
     internal class Node
     {
-        public int Id { get; set; }
         public string Name { get; set; }
-        public Node predecessorNode { get; set; }
-        public List<Node> ListAdjacentNodes { get; set; }
+        public Dictionary<string,int> DictDistances { get;set; }
 
-        public Node(int id)
+        public Node(string name)
         {
-            Id = id;
-            ListAdjacentNodes = new List<Node>();
+            Name = name;
+            DictDistances = new Dictionary<string, int>();
         }
+
+        public Node()
+        {
+            Name = "";
+            DictDistances = new Dictionary<string, int>();
+        }
+
+        public int DistanceTo(Node n)
+        {
+            return DictDistances[n.Name];
+        }
+
     }
 }
