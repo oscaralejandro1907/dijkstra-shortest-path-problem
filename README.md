@@ -1,6 +1,8 @@
 # dijkstra-shortest-path-problem
 
-https://yazankhalaileh.wordpress.com/2019/07/22/c-implementation-of-dijkstras-algorithm/
+Shortest path problem solved by Dijkstra Algorithm.
 
-https://www.freecodecamp.org/news/dijkstras-shortest-path-algorithm-visual-introduction/
+Source code and background available at:
+https://learn.microsoft.com/en-us/previous-versions/ms379574(v=vs.80)#datastructures20_5_topic3
+
 
