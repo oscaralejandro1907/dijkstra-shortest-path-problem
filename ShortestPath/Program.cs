@@ -6,7 +6,8 @@
         {
             Data data = new Data();
 
-            DijkstraAlgorithm algorithm = new(data);
+            DijkstraAlgorithm algorithm = new(data, data.ListNodes[0]);
+            algorithm.SolveDijkstra();
         }
     }
 }

@@ -18,46 +18,43 @@ namespace ShortestPath
 
         public void MakeGraph()
         {
-            Node a = new Node("0");
-            Node b = new Node("1");
-            Node c = new Node("2");
-            Node d = new Node("3");
-            Node e = new Node("4");
-            Node f = new Node("5");
-            Node g = new Node("6");
+            Node NewYork = new Node("New York");
+            Node Miami = new Node("Miami");
+            Node Chicago = new Node("Chicago");
+            Node Dallas = new Node("Dallas");
+            Node Denver = new Node("Denver");
+            Node SanFrancisco = new Node("San Francisco");
+            Node LA = new Node("Los Angeles");
+            Node SanDiego = new Node("San Diego");
 
-            ListNodes.Add(a);
-            ListNodes.Add(b);
-            ListNodes.Add(c);
-            ListNodes.Add(d);
-            ListNodes.Add(e);               
-            ListNodes.Add(f);
-            ListNodes.Add(g);
+            ListNodes.Add(NewYork);
+            ListNodes.Add(Miami);
+            ListNodes.Add(Chicago);
+            ListNodes.Add(Dallas);
+            ListNodes.Add(Denver);               
+            ListNodes.Add(SanFrancisco);
+            ListNodes.Add(LA);
+            ListNodes.Add(SanDiego);
 
-            a.DictDistances.Add("1", 2);
-            a.DictDistances.Add("2", 6);
+            NewYork.DictAdjCosts.Add(Miami, 90);
+            NewYork.DictAdjCosts.Add(Chicago,75);
+            NewYork.DictAdjCosts.Add(Dallas, 125);
+            NewYork.DictAdjCosts.Add(Denver, 100);
 
-            b.DictDistances.Add("0", 2);
-            b.DictDistances.Add("3", 5);
+            Miami.DictAdjCosts.Add(Dallas, 50);
 
-            c.DictDistances.Add("0", 6);
-            c.DictDistances.Add("3", 8);
+            Chicago.DictAdjCosts.Add(SanFrancisco, 25);
+            Chicago.DictAdjCosts.Add(Denver, 20);
 
-            d.DictDistances.Add("1", 5);
-            d.DictDistances.Add("2", 8);
-            d.DictDistances.Add("4", 10);
-            d.DictDistances.Add("5", 15);
+            Dallas.DictAdjCosts.Add(SanDiego, 90);
+            Dallas.DictAdjCosts.Add(LA, 80);
 
-            e.DictDistances.Add("3", 10);
-            e.DictDistances.Add("5", 6);
-            e.DictDistances.Add("6", 2);
+            Denver.DictAdjCosts.Add(SanFrancisco, 75);
+            Denver.DictAdjCosts.Add(LA, 100);
 
-            f.DictDistances.Add("3", 15);
-            f.DictDistances.Add("4", 6);
-            f.DictDistances.Add("6", 6);
+            SanFrancisco.DictAdjCosts.Add(LA, 45);
 
-            g.DictDistances.Add("4", 2);
-            g.DictDistances.Add("5", 6);
+            SanDiego.DictAdjCosts.Add(LA, 45);
         }
     }
 }

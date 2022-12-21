@@ -9,23 +9,19 @@ namespace ShortestPath
     internal class Node
     {
         public string Name { get; set; }
-        public Dictionary<string,int> DictDistances { get;set; }
+        public Dictionary<Node,int> DictAdjCosts { get;set; }
+        
 
         public Node(string name)
         {
             Name = name;
-            DictDistances = new Dictionary<string, int>();
+            DictAdjCosts = new Dictionary<Node, int>();
         }
 
         public Node()
         {
             Name = "";
-            DictDistances = new Dictionary<string, int>();
-        }
-
-        public int DistanceTo(Node n)
-        {
-            return DictDistances[n.Name];
+            DictAdjCosts = new Dictionary<Node, int>();
         }
 
     }
