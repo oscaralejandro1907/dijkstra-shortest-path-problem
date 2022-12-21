@@ -8,6 +8,7 @@
 
             DijkstraAlgorithm algorithm = new(data, data.ListNodes[0]);
             algorithm.SolveDijkstra();
+            algorithm.PrintSolution();
         }
     }
 }
